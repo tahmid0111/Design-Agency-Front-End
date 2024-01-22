@@ -8,6 +8,7 @@ import Team from './pages/Team'
 import Service from './pages/Service'
 import Projects from './pages/Projects'
 import Testimonials from './pages/Testimonials'
+import MemberDetails from './components/Team/MemberDetails'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/team' element={<Team />} />
+          <Route path='/member/:id' element={<MemberDetails />} />
           <Route path='/service' element={<Service />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/testimonials' element={<Testimonials />} />

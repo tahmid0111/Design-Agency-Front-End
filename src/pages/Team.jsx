@@ -1,23 +1,44 @@
-import React from 'react';
-import Layout from '../Layout/Layout';
-import members from '../database/teamMember.json'
-import SingleTeam from '../components/Team/SingleTeam';
+import React, { useEffect, useState } from "react";
+import Layout from "../Layout/Layout";
+import SingleTeam from "../components/Team/SingleTeam";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Team = () => {
-    return (
-        <Layout>
-            <div className='container mx-auto'>
-                <h1 className='text-xl font-bold py-5 text-orange-500'>OUR TEAM MEMBER</h1>
-                <p className='text-2xl w-[60%] pb-5'>Check our awesome team members</p>
-            </div>
+  const [members, setMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-            <div className='grid grid-cols-12'>
-                {
-                    members.map((member, i) => <SingleTeam key={i} member={member} />)
-                }
-            </div>
-        </Layout>
-    );
+  useEffect(() => {
+    FetchData();
+  }, []);
+
+  async function FetchData() {
+    setLoading(true);
+    let result = await fetch("http://localhost:3000/api/v1/allmembers");
+    const data = await result.json();
+
+    setMembers(data.data);
+    setLoading(false);
+  }
+  
+
+  return (
+    <Layout>
+      <div className="mx-5 grid grid-cols-12">
+
+      {loading && (
+        <div className="col-span-4">
+            <Skeleton count={5} />
+        </div>
+      )}
+
+        {members.map((member, i) => (
+          <SingleTeam key={i} member={member} />
+        ))}
+      </div>
+    </Layout>
+  );
 };
 
 export default Team;

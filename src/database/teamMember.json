@@ -1,29 +1,44 @@
 [
   {
-    "name": "Devon Lane",
-    "imgSrc": "/team/team_1.jpg",
-    "socials": {
-      "facebook": "https://www.facebook.com",
-      "twitter": "https://www.twitter.com",
-      "instagram": "https://www.instagram.com"
-    }
+    "_id": "5fe9b4777a5791268cc28462",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
   },
   {
-    "name": "Danny Bailey",
-    "imgSrc": "/team/team_2.jpg",
-    "socials": {
-      "facebook": "https://www.facebook.com",
-      "twitter": "https://www.twitter.com",
-      "instagram": "https://www.instagram.com"
-    }
+    "_id": "5fe9b4777a5791268cc28463",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
   },
   {
-    "name": "Alex Lov",
-    "imgSrc": "/team/team_3.jpg",
-    "socials": {
-      "facebook": "https://www.facebook.com",
-      "twitter": "https://www.twitter.com",
-      "instagram": "https://www.instagram.com"
-    }
+    "_id": "5fe9b4777a5791268cc28464",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
+  },
+  {
+    "_id": "5fe9b4777a5791268cc28465",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
+  },
+  {
+    "_id": "5fe9b4777a5791268cc28466",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
+  },
+  {
+    "_id": "5fe9b4777a5791268cc28467",
+    "Name": "John Doe",
+    "Position": "Software Engineer",
+    "About": "Experienced software engineer with expertise in web development.",
+    "Review": "John is a valuable team member. His coding skills are excellent."
   }
 ]

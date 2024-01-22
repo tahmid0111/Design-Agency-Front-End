@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { FaAlignLeft } from "react-icons/fa6";
 
 
@@ -31,27 +31,17 @@ const Header = () => {
                 <NavLink to='/testimonials' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Testimonials</NavLink>
               </li>
               <li className="py-8 px-2 lg:px-5">
-                <button className="btn btn-outline btn-primary">
-                  <NavLink to=''>Login</NavLink>
+                <button className="btn btn-outline btn-success">
+                  <Link to='' className="text-black">Login</Link>
                 </button>
               </li>
               <li className="py-8 px-2 lg:px-5">
-                <button className="btn btn-secondary">
-                  <NavLink to=''>Register</NavLink>
+                <button className="btn btn-success">
+                  <Link to=''>Register</Link>
                 </button>
               </li>
             </ul>
-
-            
-            
-            
-            
-            
-
                   {/* not used yet */}
-            
-            
-
           </div>
         </div>
     </div>
