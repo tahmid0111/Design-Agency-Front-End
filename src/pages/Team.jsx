@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../Layout/Layout";
 import SingleTeam from "../components/Team/SingleTeam";
-
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import PageTitle from "../components/shared/PageTitle";
 
 const Team = () => {
   const [members, setMembers] = useState([]);
@@ -21,17 +19,23 @@ const Team = () => {
     setMembers(data.data);
     setLoading(false);
   }
-  
 
   return (
     <Layout>
+      <PageTitle
+        title="Team"
+        subTitle="Our Team Members"
+        desc="Check our awesome team members"
+      />
       <div className="mx-5 grid grid-cols-12">
-
-      {loading && (
-        <div className="col-span-4">
-            <Skeleton count={5} />
-        </div>
-      )}
+        {loading && (
+          <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
+            <img
+              className="w-20 h-20 animate-spin"
+              src="https://www.svgrepo.com/show/474682/loading.svg"
+              alt="Loading icon"></img>
+          </div>
+        )}
 
         {members.map((member, i) => (
           <SingleTeam key={i} member={member} />

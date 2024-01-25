@@ -1,19 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../Layout/Layout'
 
-import tests from '../database/testimonials.json'
 import SingleTestimonial from '../components/testimonial/SingleTestimonial'
 
 const Testimonials = () => {
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    FetchData();
+  }, []);
+
+  async function FetchData() {
+    setLoading(true);
+    let result = await fetch("http://localhost:3000/api/v1/allreviews");
+    const data = await result.json();
+
+    setReviews(data.data);
+    setLoading(false);
+  }
+
   return (
     <Layout>
-        <div className='container mx-auto'>
-            <h1 className='text-xl font-bold py-5 text-orange-500'>TESTIMONIALS LIST</h1>
-            <p className='text-2xl w-[60%] pb-5'>Better Agency/SEO Solution At Your Fingertips</p>
-        </div>
         <div className='grid grid-cols-12 container mx-auto gap-5'>
+          
+        {loading && (
+          <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
+            <img
+              className="w-20 h-20 animate-spin"
+              src="https://www.svgrepo.com/show/474682/loading.svg"
+              alt="Loading icon"></img>
+          </div>
+        )}
+
           {
-            tests.map((test, i) => <SingleTestimonial key={i} test={test} />)
+            reviews.map((test, i) => <SingleTestimonial key={i} test={test} />)
           }
         </div>
     </Layout>
