@@ -6,7 +6,7 @@ import { FaAlignLeft } from "react-icons/fa6";
 const Header = () => {
   return (
     <>
-    <div className="hidden md:block bg-orange-500 sticky top-0 left-0 z-[99999] border-b-2 border-black">
+    <div className="hidden md:block bg-orange-500 border-b-2 border-black">
       <div className="header-area px-2 lg:px-10 grid grid-cols-12 ">
           <div className="col-span-4">
             <h3 className="py-8 xl:py-10 text-2xl font-bold xl:text-center">Design<span className="text-white">Agency</span></h3>
