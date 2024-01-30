@@ -23,7 +23,6 @@ const Projects = () => {
   return (
     <Layout>
       <div className="grid grid-cols-12 container mx-auto gap-5">
-
         {loading && (
           <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
             <img
@@ -36,7 +35,6 @@ const Projects = () => {
         {projects.map((project, i) => (
           <SingleProjects key={i} project={project} />
         ))}
-
       </div>
     </Layout>
   );
