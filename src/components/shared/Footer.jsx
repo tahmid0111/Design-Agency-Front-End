@@ -46,16 +46,16 @@ const Footer = () => {
         <div className="col-span-4 py-[50px] text-center text-white">
           <h3 className="text-xl mb-5">Quick Links</h3>
           <ul>
-            <li>
+            <li className="mb-2 hover:underline">
               <Link>Team</Link>
             </li>
-            <li>
+            <li className="mb-2 hover:underline">
               <Link>Service</Link>
             </li>
-            <li>
+            <li className="mb-2 hover:underline">
               <Link>Projects</Link>
             </li>
-            <li>
+            <li className="mb-2 hover:underline">
               <Link>Testimonials</Link>
             </li>
           </ul>

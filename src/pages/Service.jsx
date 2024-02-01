@@ -3,6 +3,7 @@ import Layout from "../Layout/Layout";
 
 import SingleService from "../components/service/SingleService";
 import PageTitle from "../components/shared/PageTitle";
+import SectionTitle from "../components/shared/SectionTitle";
 
 const Service = () => {
   const [services, setServices] = useState([]);
@@ -23,8 +24,8 @@ const Service = () => {
 
   return (
     <Layout>
-      <PageTitle
-        title="Service"
+      <PageTitle title="Service" />
+      <SectionTitle
         subTitle="Our All Services"
         desc="We provide best web-design services"
       />

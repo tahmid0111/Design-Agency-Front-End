@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Layout from '../Layout/Layout'
+import React, { useEffect, useState } from "react";
+import Layout from "../Layout/Layout";
 
-import SingleTestimonial from '../components/testimonial/SingleTestimonial'
+import SingleTestimonial from "../components/testimonial/SingleTestimonial";
+import PageTitle from "../components/shared/PageTitle";
+import SectionTitle from "../components/shared/SectionTitle";
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
@@ -22,8 +24,12 @@ const Testimonials = () => {
 
   return (
     <Layout>
-        <div className='grid grid-cols-12 container mx-auto gap-5'>
-          
+      <PageTitle title="Service" />
+      <SectionTitle
+        subTitle="Our All Services"
+        desc="We provide best web-design services"
+      />
+      <div className="grid grid-cols-12 container mx-auto gap-5">
         {loading && (
           <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
             <img
@@ -33,12 +39,12 @@ const Testimonials = () => {
           </div>
         )}
 
-          {
-            reviews.map((test, i) => <SingleTestimonial key={i} test={test} />)
-          }
-        </div>
+        {reviews.map((test, i) => (
+          <SingleTestimonial key={i} test={test} />
+        ))}
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

@@ -1,69 +1,119 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
 import { FaAlignLeft } from "react-icons/fa6";
-
-
 
 const Header = () => {
   return (
     <>
-    <div className="hidden md:block bg-orange-500 border-b-2 border-black">
-      <div className="header-area px-2 lg:px-10 grid grid-cols-12 ">
+      <div className="hidden md:block bg-orange-500 border-b-2 border-black">
+        <div className="header-area px-2 lg:px-10 grid grid-cols-12 ">
           <div className="col-span-4">
-            <h3 className="py-8 xl:py-10 text-2xl font-bold xl:text-center">Design<span className="text-white">Agency</span></h3>
+            <h3 className="py-8 xl:py-10 text-2xl font-bold xl:text-center">
+              Design<span className="text-white">Agency</span>
+            </h3>
           </div>
 
           <div className="col-span-8">
-
             <ul className="flex float-right">
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Home</NavLink>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active text-lg font-semibold"
+                      : "text-lg font-semibold"
+                  }>
+                  Home
+                </NavLink>
               </li>
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/team' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Team</NavLink>
+                <NavLink
+                  to="/team"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active text-lg font-semibold"
+                      : "text-lg font-semibold"
+                  }>
+                  Team
+                </NavLink>
               </li>
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/service' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Service</NavLink>
+                <NavLink
+                  to="/service"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active text-lg font-semibold"
+                      : "text-lg font-semibold"
+                  }>
+                  Service
+                </NavLink>
               </li>
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/projects' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Projects</NavLink>
+                <NavLink
+                  to="/projects"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active text-lg font-semibold"
+                      : "text-lg font-semibold"
+                  }>
+                  Projects
+                </NavLink>
               </li>
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/testimonials' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Testimonials</NavLink>
+                <NavLink
+                  to="/testimonials"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active text-lg font-semibold"
+                      : "text-lg font-semibold"
+                  }>
+                  Testimonials
+                </NavLink>
               </li>
               <li className="py-8 px-2 lg:px-5">
                 <button className="btn btn-outline btn-success">
-                  <Link to='' className="text-black">Login</Link>
+                  <Link to="" className="text-black">
+                    Login
+                  </Link>
                 </button>
               </li>
               <li className="py-8 px-2 lg:px-5">
                 <button className="btn btn-success">
-                  <Link to=''>Register</Link>
+                  <Link to="">Register</Link>
                 </button>
               </li>
             </ul>
-                  {/* not used yet */}
+            {/* not used yet */}
           </div>
         </div>
-    </div>
-
+      </div>
       <div className="small-navbar container mx-auto md:hidden">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
-          <FaAlignLeft />
+            <FaAlignLeft />
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/team'>Team</NavLink></li>
-            <li><NavLink to='/service'>Service</NavLink></li>
-            <li><NavLink to='/projects'>Projects</NavLink></li>
-            <li><NavLink to='/testimonials'>Testimonials</NavLink></li>
-
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/team">Team</NavLink>
+            </li>
+            <li>
+              <NavLink to="/service">Service</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/testimonials">Testimonials</NavLink>
+            </li>
           </ul>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

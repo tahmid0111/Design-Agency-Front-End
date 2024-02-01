@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import SingleWorkList from "./SingleWorkList";
 import SingleWorkList2 from "./SingleWorkList2";
+import SectionTitle from "../shared/SectionTitle";
 
 const WorkList = () => {
   const [works, setWorks] = useState([]);
@@ -22,6 +23,10 @@ const WorkList = () => {
 
   return (
     <div className="lg:container lg:mx-auto py-10 px-5">
+            <SectionTitle
+        subTitle="Our All Services"
+        desc="We provide best web-design services"
+      />
       {loading && (
         <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
           <img

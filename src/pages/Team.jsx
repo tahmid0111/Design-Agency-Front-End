@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../Layout/Layout";
 import SingleTeam from "../components/Team/SingleTeam";
 import PageTitle from "../components/shared/PageTitle";
+import SectionTitle from "../components/shared/SectionTitle";
 
 const Team = () => {
   const [members, setMembers] = useState([]);
@@ -22,8 +23,8 @@ const Team = () => {
 
   return (
     <Layout>
-      <PageTitle
-        title="Team"
+      <PageTitle title="Team" />
+      <SectionTitle
         subTitle="Our Team Members"
         desc="Check our awesome team members"
       />

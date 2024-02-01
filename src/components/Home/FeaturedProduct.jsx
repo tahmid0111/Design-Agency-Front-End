@@ -1,5 +1,5 @@
-import { useState, useEffect} from "react";
-import { featured, featuredData } from "../../database/data";
+import { useState, useEffect } from "react";
+import SectionTitle from "../shared/SectionTitle";
 
 const FeaturedProduct = () => {
   const [features, setFeatures] = useState([]);
@@ -19,19 +19,31 @@ const FeaturedProduct = () => {
   }
 
   return (
-    <div className="bg-blue-200">
-      <div className="px-5">
-        <div className="py-10">
-          {featured.map((item, i) => (
-            <div key={i}>
-              <p className="text-orange-500 font-semibold text-lg">
-                {item.title}
-              </p>
-              <p className="pt-5 md:w-[50%] lg:w-[40%] text-2xl font-bold">
-                {item.subtitle}
-              </p>
+    <div className="bg-blue-200 py-10">
+      <SectionTitle
+        subTitle="Our All Services"
+        desc="We provide best web-design services"
+      />
+      <div className="grid grid-cols-12 mx-5">
+        <div className="col-span-6">
+          {features.slice(0, 1).map((item, i) => (
+            <div className="pt-3">
+              <img src={item.Image} alt="" className="rounded-lg w-full mb-5" />
+              <p>{item.SubTitle}</p>
+              <h2 className="text-xl font-bold">{item.Title}</h2>
             </div>
           ))}
+        </div>
+        <div className="col-span-6 ml-5">
+          <div className="grid grid-cols-12">
+            {features.slice(1).map((item, i) => (
+              <div className="col-span-6 p-3">
+                <img src={item.Image} alt="" className="w-[90%] rounded-lg mb-3" />
+                <p>{item.SubTitle}</p>
+                <h2 className="font-bold">{item.Title}</h2>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

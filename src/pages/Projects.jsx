@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import Layout from "../Layout/Layout";
 
 import SingleProjects from "../components/projects/SingleProjects";
+import PageTitle from "../components/shared/PageTitle";
+import SectionTitle from "../components/shared/SectionTitle";
+import MobileMenu from "../components/shared/MobileMenu";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -22,6 +25,12 @@ const Projects = () => {
 
   return (
     <Layout>
+      {/* <MobileMenu /> */}
+      <PageTitle title="Service" />
+      <SectionTitle
+        subTitle="Our All Services"
+        desc="We provide best web-design services"
+      />
       <div className="grid grid-cols-12 container mx-auto gap-5">
         {loading && (
           <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
