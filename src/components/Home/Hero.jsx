@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero-area py-10 bg-orange-500">
-        <div className="container mx-auto px-5 grid grid-cols-12">
+        <div className="px-5 lg:px-10 xl:px-16 grid grid-cols-12">
           {loading && (
             <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
               <img
