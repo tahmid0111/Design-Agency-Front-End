@@ -23,9 +23,9 @@ const WorkList = () => {
 
   return (
     <div className="lg:container lg:mx-auto py-10 px-5">
-            <SectionTitle
-        subTitle="Our All Services"
-        desc="We provide best web-design services"
+      <SectionTitle
+        subTitle="Work List"
+        desc="We provide the Perfect Solution to your business growth"
       />
       {loading && (
         <div className="col-span-12 mx-auto pt-[250px] mb-[700px]">
@@ -41,7 +41,7 @@ const WorkList = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-12 py-[100px] container mx-auto">
+      <div className="grid grid-cols-12 py-[100px]">
         {works.map((item, i) => (
           <SingleWorkList2 key={i} item={item} />
         ))}

@@ -7,7 +7,7 @@ const SectionTitle = (props) => {
       <h1 className="uppercase text-orange-500 text-2xl font-bold">
         {subTitle}
       </h1>
-      <h1 className="text-xl py-5 pb-10">{desc}</h1>
+      <h1 className="text-xl py-5 pb-20">{desc}</h1>
     </div>
   );
 };

@@ -21,8 +21,8 @@ const FeaturedProduct = () => {
   return (
     <div className="bg-blue-200 py-10">
       <SectionTitle
-        subTitle="Our All Services"
-        desc="We provide best web-design services"
+        subTitle="Featured Project"
+        desc="We provide the Perfect Solution to your business growth"
       />
       <div className="grid grid-cols-12 mx-5">
         <div className="col-span-6">
