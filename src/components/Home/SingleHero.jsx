@@ -7,11 +7,14 @@ const SingleHero = (props) => {
   return (
     <>
       <div className="col-span-12 lg:col-span-6 text-center lg:text-left mr-2 my-10 lg:my-0">
-        <h1 className="text-[50px] lg:text-[40px] xl:text-[50px] font-bold w-full lg:w-[50
-          %] xl:w-[80%] lg:pt-10">{Title}</h1>
-        <p className="text-lg font-semibold lg:w-[75%] py-5">{SubTitle}</p>
+        <h1 className="text-[50px] lg:text-[40px] xl:text-[50px] 2xl:text-[65px] font-bold w-full lg:w-[80%] lg:pt-10 2xl:pt-[10%]">
+          {Title}
+        </h1>
+        <p className="text-lg 2xl:text-xl font-semibold lg:w-[75%] py-5">
+          {SubTitle}
+        </p>
         <Link to="/service">
-          <button className="btn bg-black text-white hover:bg-orange-500">
+          <button className="btn 2xl:text-lg bg-black text-white hover:bg-orange-500">
             Get Started
           </button>
         </Link>

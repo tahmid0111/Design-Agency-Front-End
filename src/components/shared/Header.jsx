@@ -7,7 +7,7 @@ const Header = () => {
       <div className="hidden md:block bg-orange-500 border-b-2 border-black">
         <div className="header-area px-2 lg:px-10 grid grid-cols-12 ">
           <div className="col-span-4">
-            <h3 className="py-8 xl:py-10 text-2xl font-bold xl:text-center">
+            <h3 className="py-8 xl:py-10 text-2xl 2xl:text-4xl font-bold xl:text-center">
               Design<span className="text-white">Agency</span>
             </h3>
           </div>
@@ -19,8 +19,8 @@ const Header = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "active text-lg font-semibold"
-                      : "text-lg font-semibold"
+                      ? "active text-lg 2xl:text-xl font-semibold"
+                      : "text-lg 2xl:text-xl font-semibold"
                   }>
                   Home
                 </NavLink>
@@ -30,8 +30,8 @@ const Header = () => {
                   to="/team"
                   className={({ isActive }) =>
                     isActive
-                      ? "active text-lg font-semibold"
-                      : "text-lg font-semibold"
+                      ? "active text-lg 2xl:text-xl font-semibold"
+                      : "text-lg 2xl:text-xl font-semibold"
                   }>
                   Team
                 </NavLink>
@@ -41,8 +41,8 @@ const Header = () => {
                   to="/service"
                   className={({ isActive }) =>
                     isActive
-                      ? "active text-lg font-semibold"
-                      : "text-lg font-semibold"
+                      ? "active text-lg 2xl:text-xl font-semibold"
+                      : "text-lg 2xl:text-xl font-semibold"
                   }>
                   Service
                 </NavLink>
@@ -52,8 +52,8 @@ const Header = () => {
                   to="/projects"
                   className={({ isActive }) =>
                     isActive
-                      ? "active text-lg font-semibold"
-                      : "text-lg font-semibold"
+                      ? "active text-lg 2xl:text-xl font-semibold"
+                      : "text-lg 2xl:text-xl font-semibold"
                   }>
                   Projects
                 </NavLink>
@@ -63,22 +63,22 @@ const Header = () => {
                   to="/testimonials"
                   className={({ isActive }) =>
                     isActive
-                      ? "active text-lg font-semibold"
-                      : "text-lg font-semibold"
+                      ? "active text-lg 2xl:text-xl font-semibold"
+                      : "text-lg 2xl:text-xl font-semibold"
                   }>
                   Testimonials
                 </NavLink>
               </li>
               <li className="py-8 px-2 lg:px-5">
                 <button className="btn btn-outline btn-success">
-                  <Link to="" className="text-black">
+                  <Link to="" className="text-black 2xl:text-lg">
                     Login
                   </Link>
                 </button>
               </li>
               <li className="py-8 px-2 lg:px-5">
                 <button className="btn btn-success">
-                  <Link to="">Register</Link>
+                  <Link className="2xl:text-lg" to="">Register</Link>
                 </button>
               </li>
             </ul>
