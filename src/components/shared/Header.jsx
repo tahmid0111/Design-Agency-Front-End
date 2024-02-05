@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaAlignLeft } from "react-icons/fa6";
+import { FaAlignJustify } from "react-icons/fa6";
 
 const Header = () => {
   return (
@@ -86,30 +86,37 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="small-navbar container mx-auto md:hidden">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <FaAlignLeft />
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/team">Team</NavLink>
-            </li>
-            <li>
-              <NavLink to="/service">Service</NavLink>
-            </li>
-            <li>
-              <NavLink to="/projects">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to="/testimonials">Testimonials</NavLink>
-            </li>
-          </ul>
+      <div className="small-navbar px-10 md:hidden grid grid-cols-12">
+        <div className="col-span-8">
+          <h3 className="py-5 xl:py-10 text-2xl font-bold xl:text-center">
+            Design<span className="text-orange-500">Agency</span>
+          </h3>
+        </div>
+        <div className="col-span-4">
+          <div className="dropdown float-right">
+            <label tabIndex={0} className="btn btn-ghost btn-circle mt-4">
+              <FaAlignJustify className="text-2xl text-orange-500" />
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 ml-[-200px] z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/team">Team</NavLink>
+              </li>
+              <li>
+                <NavLink to="/service">Service</NavLink>
+              </li>
+              <li>
+                <NavLink to="/projects">Projects</NavLink>
+              </li>
+              <li>
+                <NavLink to="/testimonials">Testimonials</NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

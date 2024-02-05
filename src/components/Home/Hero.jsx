@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SingleHero from "./SingleHero";
 
 const Hero = () => {
-  const [hero, setHero] = useState([]);
+  const [hero, setHero] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -32,9 +32,7 @@ const Hero = () => {
             </div>
           )}
 
-          {hero.map((item, i) => (
-            <SingleHero key={i} item={item} />
-          ))}
+          <SingleHero item={hero} />
         </div>
       </div>
     </>
